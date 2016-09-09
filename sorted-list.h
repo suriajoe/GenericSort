@@ -109,7 +109,11 @@ int SLInsert(SortedListPtr list, void *newObj);
 
 int SLRemove(SortedListPtr list, void *newObj);
 
+/*
+ * prints list assuming data is of int type
+ */
 
+void SLPrintList(SortedListPtr list);
 
 //======1: SortedList Iterator============================
 //===1.1: SortedList Iterator Definition, Create/Destroy
@@ -123,8 +127,8 @@ int SLRemove(SortedListPtr list, void *newObj);
  */
 struct SortedListIterator
 {
-    SortedListPtr list;
-   
+   ListNodePtr node;
+   SortedListPtr list;
 };
 typedef struct SortedListIterator* SortedListIteratorPtr;
 
